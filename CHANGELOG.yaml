@@ -1,0 +1,10 @@
+xt:
+  - meta:
+      projectURL: https://github.com/golistic/xt
+      description: |
+        All notable changes to this project will be documented in this file.
+        Note: Using YAML is experimental, but since it is human readable, should be OK.
+  - versions:
+      - version: v1.0.0
+        date: 2022-11-10
+        description: Initial release
