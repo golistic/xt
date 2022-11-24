@@ -18,6 +18,8 @@ func OK(t *testing.T, err error, messages ...string) {
 }
 
 func ok(t *testing.T, out io.Writer, err error, messages ...string) {
+	TestHelper(t)
+
 	if err != nil {
 		if len(messages) > 0 {
 			messages = append([]string{"--"}, messages...)
@@ -35,10 +37,13 @@ func ok(t *testing.T, out io.Writer, err error, messages ...string) {
 // is done lots, it is nicer to read in tests.
 func KO(t *testing.T, err error, messages ...string) {
 	TestHelper(t)
+
 	ko(t, nil, err, messages...)
 }
 
 func ko(t *testing.T, out io.Writer, err error, messages ...string) {
+	TestHelper(t)
+
 	if err == nil {
 		if len(messages) > 0 {
 			messages = append([]string{"--"}, messages...)
