@@ -5,6 +5,10 @@ xt:
         All notable changes to this project will be documented in this file.
         Note: Using YAML is experimental, but since it is human readable, should be OK.
   - versions:
+      - version: v1.0.1
+        date: 2022-11-24
+        fixed:
+          - Fixed test helpers so correct file is reported, and better message for panics
       - version: v1.0.0
         date: 2022-11-10
         description: Initial release
