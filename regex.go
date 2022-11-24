@@ -12,10 +12,13 @@ import (
 // MatchString tests whether the string s matches the regular expression pattern.
 func MatchString(t *testing.T, pattern, s string, messages ...string) {
 	TestHelper(t)
+
 	matchString(t, nil, pattern, s, messages...)
 }
 
 func matchString(t *testing.T, out io.Writer, pattern, s string, messages ...string) {
+	TestHelper(t)
+
 	m, err := regexp.MatchString(pattern, s)
 	if err != nil {
 		panic(err.Error())
